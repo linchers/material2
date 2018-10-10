@@ -220,6 +220,10 @@ export class MatPaginator extends _MatPaginatorBase implements OnInit, OnDestroy
     this.pageSize = pageSize;
     this._emitPageEvent(previousPageIndex);
   }
+  
+  changeDetector(): void {
+    this._changeDetectorRef.markForCheck()
+  }
 
   /**
    * Updates the list of page size options to display to the user. Includes making sure that
